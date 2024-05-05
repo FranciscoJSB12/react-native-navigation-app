@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { Pressable, Text } from 'react-native';
+import { Pressable } from 'react-native';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
-export const HamburguerMenu = () => {
+export const HamburgerMenu = () => {
   const navigation = useNavigation();
 
   useEffect(() => {
@@ -10,8 +11,13 @@ export const HamburguerMenu = () => {
       headerLeft: () => (
         <Pressable
           onPress={() => navigation.dispatch(DrawerActions.toggleDrawer)}
+          style={{ marginLeft: 5 }}
         >
-          <Text>Menú</Text>
+          <Ionicons
+            name='menu-sharp'
+            size={30}
+            color='gray'
+          />
         </Pressable>
       ),
     });
