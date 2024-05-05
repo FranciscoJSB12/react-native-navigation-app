@@ -5,7 +5,7 @@ import {
   DrawerItemList,
   createDrawerNavigator,
 } from '@react-navigation/drawer';
-import { StackNavigator } from './StackNavigator';
+import { BottomTabNavigators } from './BottomTabNavigators';
 import { ProfileScreen } from '../screens/profile/ProfileScreen';
 import { globalColors } from '../theme/theme';
 
@@ -30,8 +30,8 @@ export const SideMenuNavigator = () => {
       }}
     >
       <Drawer.Screen
-        name='StackNavigator'
-        component={StackNavigator}
+        name='Tabs'
+        component={BottomTabNavigators}
       />
       <Drawer.Screen
         name='Profile'
