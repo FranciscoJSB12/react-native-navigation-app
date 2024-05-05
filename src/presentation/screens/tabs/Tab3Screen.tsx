@@ -1,5 +1,11 @@
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
+import { HamburguerMenu } from '../../components/shared/HamburguerMenu';
 
 export const Tab3Screen = () => {
-  return <Text>Tab3Screen</Text>;
+  return (
+    <View>
+      <HamburguerMenu />
+      <Text>Tab3Screen</Text>
+    </View>
+  );
 };
